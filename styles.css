@@ -83,4 +83,4 @@ html, body {
         height: 0;
         padding-bottom: 100%; /* Mantener la proporción cuadrada */
     }
-}
+} /*faltan ajustes a los media queries*/
