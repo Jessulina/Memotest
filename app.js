@@ -50,6 +50,7 @@ function verificarCoincidencia() {
     let esCoincidencia = primeraFicha.dataset.imagen === segundaFicha.dataset.imagen;
 
     if (esCoincidencia) {
+        ficha.remove();
         resetearTablero();
         setTimeout(verificarGanador, 200);
     } else {
