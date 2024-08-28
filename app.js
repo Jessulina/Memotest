@@ -50,17 +50,12 @@ function verificarCoincidencia() {
     let esCoincidencia = primeraFicha.dataset.imagen === segundaFicha.dataset.imagen;
 
     if (esCoincidencia) {
-        eliminarFichasCoincidentes();
+       
+        resetearTablero();
         setTimeout(verificarGanador, 200);
     } else {
         desvoltearFichas();
     }
-}
-
-function eliminarFichasCoincidentes() {
-    primeraFicha.remove(); // Eliminar la primera ficha
-    segundaFicha.remove(); // Eliminar la segunda ficha
-    resetearTablero();
 }
 
 function desvoltearFichas() {
@@ -71,7 +66,7 @@ function desvoltearFichas() {
         primeraFicha.classList.remove('volteada');
         segundaFicha.classList.remove('volteada');
         resetearTablero();
-    }, 2000);
+    }, 1000);
 }
 
 function resetearTablero() {
