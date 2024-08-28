@@ -50,12 +50,17 @@ function verificarCoincidencia() {
     let esCoincidencia = primeraFicha.dataset.imagen === segundaFicha.dataset.imagen;
 
     if (esCoincidencia) {
-       
-        resetearTablero();
+        eliminarFichasCoincidentes();
         setTimeout(verificarGanador, 200);
     } else {
         desvoltearFichas();
     }
+}
+
+function eliminarFichasCoincidentes() {
+    primeraFicha.remove(); // Eliminar la primera ficha
+    segundaFicha.remove(); // Eliminar la segunda ficha
+    resetearTablero();
 }
 
 function desvoltearFichas() {
